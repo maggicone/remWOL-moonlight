@@ -13,14 +13,16 @@ A fork of [Moonlight-QT](https://github.com/moonlight-stream/moonlight-qt) with 
 
 No more switching apps — just open Moonlight, hit Wake, and stream.
 
+> ⚠️ **Platform support:** currently the Moonlight fork is only available as an **AppImage for Linux**. Windows and macOS builds are not yet supported.
+
 → See [`/moonlight`](./moonlight) for build instructions.
 
 ---
 
-### 🌐 `/server` — Wake-on-LAN API Server
+### 🌐 `/remWOL` — Wake-on-LAN API Server
 A lightweight self-hosted HTTP API server that sends Wake-on-LAN magic packets to devices on your local network. Zero dependencies, single Docker container.
 
-→ See [`/server`](./server) for full documentation.
+→ See [`/remWOL`](./remWOL) for full documentation.
 
 **Quick start:**
 ```bash
@@ -50,9 +52,9 @@ Moonlight fork  ──→  WOL API Server  ──→  Magic Packet  ──→  Y
 
 ## Requirements
 
-- A always-on device on your LAN to run the WOL server (NAS, Raspberry Pi, home server)
+- An always-on device on your LAN to run the WOL server (NAS, Raspberry Pi, home server)
 - Wake-on-LAN enabled in your PC's BIOS
-- Moonlight fork installed on your streaming device (phone, tablet, Steam Deck...)
+- Moonlight fork installed on your streaming device — **Linux only (AppImage)** for now
 
 ---
 
