@@ -11,7 +11,7 @@ remWOL-moonlight is a project that integrates Directly into Moonlight a new butt
 This project uses a slightly custom version of moonlight with an added **Wake PC (API)** button that calls the WOL server directly from the Moonlight interface
 
 
-1. You click **Wake PC** in the Moonlight fork
+1. You click **Wake PC (API)** in the Moonlight fork
 2. Moonlight calls `GET /wake/<device>?token=<your-token>` on the WOL server
 3. The server sends a UDP magic packet on the local network
 4. Your PC powers on
