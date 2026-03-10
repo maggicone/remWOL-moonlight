@@ -123,19 +123,20 @@ There are two possible approaches:
 
 # Setup with DuckDNS + Port Forwarding
 
-Install DuckDNS on your server.
+1) Install DuckDNS on your server.
 
 You can follow the official guide here:  
 https://www.duckdns.org/install.jsp
 
 There are also many community guides available online.
 
-Then configure **port forwarding on your router**:
+2) configure **port forwarding on your router**:
 
 - Port: **8765**
 - Protocol: **UDP**
-- Destination: **your WOL server**
+- Destination: **your WOL server IP**
 
+Alternatively, you can chose the port you prefer, but you will need to edit the compose file of the docker file accordingly.
 ---
 
 # Setup with Tailscale
