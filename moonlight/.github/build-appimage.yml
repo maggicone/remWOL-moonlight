@@ -1,0 +1,75 @@
+name: Build AppImage
+
+on:
+  push:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        submodules: recursive
+
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y \
+          build-essential \
+          qt6-base-dev \
+          qt6-declarative-dev \
+          qt6-svg-dev \
+          qt6-tools-dev \
+          libsdl2-dev \
+          libsdl2-ttf-dev \
+          libssl-dev \
+          libopus-dev \
+          libavcodec-dev \
+          libavformat-dev \
+          libswscale-dev \
+          libva-dev \
+          libvdpau-dev \
+          libegl1-mesa-dev \
+          libgl1-mesa-dev \
+          libxkbcommon-dev \
+          wget
+
+    - name: Build
+      run: |
+        mkdir build && cd build
+        qmake6 ../moonlight-qt.pro CONFIG+=release
+        make -j$(nproc)
+
+    - name: Install
+      run: |
+        cd build
+        make install INSTALL_ROOT=$HOME/AppDir
+
+    - name: Download linuxdeploy
+      run: |
+        wget -q https://github.com/linuxdeploy/linuxdeploy/releases/download/continuous/linuxdeploy-x86_64.AppImage -O linuxdeploy
+        wget -q https://github.com/linuxdeploy/linuxdeploy-plugin-qt/releases/download/continuous/linuxdeploy-plugin-qt-x86_64.AppImage -O linuxdeploy-plugin-qt-x86_64.AppImage
+        chmod +x linuxdeploy linuxdeploy-plugin-qt-x86_64.AppImage
+
+    - name: Create AppImage
+      run: |
+        cp $HOME/AppDir/usr/local/bin/moonlight $HOME/AppDir/usr/bin/moonlight
+        cp /usr/lib/x86_64-linux-gnu/libssl.so.3 $HOME/AppDir/usr/lib/
+        cp /usr/lib/x86_64-linux-gnu/libcrypto.so.3 $HOME/AppDir/usr/lib/
+        cp -r /usr/lib/x86_64-linux-gnu/qt6/qml $HOME/AppDir/usr/lib/
+        QMAKE=qmake6 ./linuxdeploy \
+          --appdir $HOME/AppDir \
+          --plugin qt \
+          --output appimage \
+          --desktop-file app/deploy/linux/com.moonlight_stream.Moonlight.desktop \
+          --icon-file app/res/moonlight.svg
+
+    - name: Upload AppImage
+      uses: actions/upload-artifact@v4
+      with:
+        name: Moonlight-WoL-AppImage
+        path: Moonlight*.AppImage

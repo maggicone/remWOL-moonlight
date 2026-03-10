@@ -1,0 +1,40 @@
+services:
+  wol-server:
+    image: ghcr.io/maggicone/remwol-moonlight:latest
+    container_name: remwol-moonlight
+    restart: unless-stopped
+    network_mode: host
+    environment:
+      # REQUIRED: token of at least 16 characters
+      - WOL_TOKEN=change-this-secret-token
+
+      # OPTIONAL: listening port (default 8765)
+      # - WOL_PORT=8765
+
+      # OPTIONAL: devices as inline JSON
+      # - WOL_DEVICES={"pc":"AA:BB:CC:DD:EE:FF","nas":"11:22:33:44:55:66"}
+
+      # OPTIONAL: CORS origin (leave empty to disable)
+      # - WOL_CORS_ORIGIN=https://my-domain.com
+
+      # OPTIONAL: rate limiting (default: 10 attempts per 60 seconds)
+      # - WOL_RATE_LIMIT_MAX=10
+      # - WOL_RATE_LIMIT_WINDOW=60
+
+      - PYTHONUNBUFFERED=1
+
+    # OPTIONAL: mount a devices.json file instead of using WOL_DEVICES
+    # volumes:
+    #   - ./devices.json:/config/devices.json:ro
+
+    healthcheck:
+      test: ["CMD", "python3", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8765/health')"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
