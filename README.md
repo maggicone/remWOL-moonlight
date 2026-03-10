@@ -17,7 +17,7 @@ No more switching apps — just open Moonlight, hit Wake, and stream.
 
 ---
 
-### 🌐 `/server` — Wake-on-LAN API Server
+### 🌐 `/remWOL` — Wake-on-LAN API Server
 A lightweight self-hosted HTTP API server that sends Wake-on-LAN magic packets to devices on your local network. Zero dependencies, single Docker container.
 
 → See [`/server`](./server) for full documentation.
