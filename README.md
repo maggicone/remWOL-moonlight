@@ -1,18 +1,46 @@
-What is remWOL-moonlight?
+# What is remWOL-moonlight?
 
 remWOL-moonlight is a project that integrates Directly into Moonlight a new button to remotely wake your pc anywhere in the world, with or without the need of a VPN, such as Tailscale.
 
-<img width="450" height="759" alt="image" src="https://github.com/user-attachments/assets/bffa5ce5-0494-4876-9877-ee53661f3fdd" /> <img width="450" height="759" alt="image2" src="https://github.com/user-attachments/assets/002c5f83-16ba-4539-92fc-b4d08a68b50a" />
+<img width="450" height="450" alt="image" src="https://github.com/user-attachments/assets/bffa5ce5-0494-4876-9877-ee53661f3fdd" /> <img width="450" height="450" alt="image2" src="https://github.com/user-attachments/assets/002c5f83-16ba-4539-92fc-b4d08a68b50a" />
 
 
 
-How doese it work?
+# How doese it work?
 
-This project uses a slightly custom version of moonlight to send an API call to an always-on-device in your home network to send a WOL request to your gaming pc.
-
-<img width="1152" height="922" alt="immagine" src="https://github.com/user-attachments/assets/4cdee816-ab51-4526-948b-9ff166bbdc7c" />
+This project uses a slightly custom version of moonlight with an added **Wake PC (API)** button that calls the WOL server directly from the Moonlight interface
 
 
+1. You click **Wake PC** in the Moonlight fork
+2. Moonlight calls `GET /wake/<device>?token=<your-token>` on the WOL server
+3. The server sends a UDP magic packet on the local network
+4. Your PC powers on
+5. Moonlight connects and starts streaming
+
+<img width="700" height="922" alt="immagine" src="https://github.com/user-attachments/assets/4cdee816-ab51-4526-948b-9ff166bbdc7c" />
+
+```
+Moonlight fork  ──→  WOL API Server  ──→  Magic Packet  ──→  Your PC wakes up
+  (client)             (self-hosted)         (UDP broadcast)
+```
+
+
+
+
+# Requirements
+
+- An always-on device on your LAN to run the WOL server (NAS, Raspberry Pi, home server)
+- Wake-on-LAN enabled in your PC's BIOS
+- Moonlight fork installed on your streaming device — **Linux only (AppImage)** for now
+
+
+
+-----------------
+
+# #
+
+
+------------------
 
 # ⚡ remWOL-moonlight
 
