@@ -75,7 +75,7 @@ There are also many community guides available online.
 Alternatively, you can choose the port you prefer, but you will need to edit the Docker compose file accordingly in the next step.  
 Using port **8765 is recommended**.
 
-Once you are sure that port forwarding and DuckDNS are correctly configured, you can proceed to [setting up the remWOL server with DuckDNS](#setup-remwol-with-duckdns).
+Once you are sure that port forwarding and DuckDNS are correctly configured, you can proceed to [setting up the remWOL server](https://github.com/maggicone/remWOL-moonlight/tree/main/remWOL#setup-guide-for-moonlight)
 
 ---
 
@@ -85,4 +85,4 @@ Once you are sure that port forwarding and DuckDNS are correctly configured, you
 2. Install **Tailscale** on your client device
 3. Connect both devices to the **same Tailnet**
 
-Once you are sure both devices are connected to the same Tailnet, you can proceed to [setting up the remWOL server with Tailscale](#setup-remwol-with-tailscale).
+Once you are sure both devices are connected to the same Tailnet, you can proceed to [setting up the remWOL server](https://github.com/maggicone/remWOL-moonlight/tree/main/remWOL#setup-guide-for-moonlight).
