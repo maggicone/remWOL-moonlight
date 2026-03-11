@@ -177,11 +177,16 @@ python3 server.py
 
 Connect the client device that will use Moonlight via **mobile data (4G/5G hotspot)** to ensure you are outside your local network.
 
-Open:
+From a browser, visit:
 
 ```
 http://<your-duckdns-domain>:8765
 ```
+A web page should load indicating that the service has been correctly installed and is running. 
+
+>[!IMPORTANT]
+>The web page is still a work in progres, you don't need to interact with anything, just make sure it loads.
+>Your browser might warn you about security risks, just ignore it and procede. This behavior is expected when dealing with self-hosted services.
 
 If the page does not load, check:
 
@@ -189,14 +194,16 @@ If the page does not load, check:
 - DuckDNS setup
 - server installation
 
+Then
 Test Wake-on-LAN by pasting this in the terminal:
 
 ```
 curl "http://<your-duckdns-domain>:8765/wake/pc?token=your-token"
 ```
 
-If the PC wakes up, the installation was successful.
-You can now go to the [Moonlight setup](link al readme moolight) 
+If the PC wakes up, the installation was successfull.
+You can now go to the last step: [Moonlight installation](https://github.com/maggicone/remWOL-moonlight/tree/main/moonlight#installation)
+
 
 ---
 
@@ -212,16 +219,20 @@ Open in your browser:
 http://<your-server-tailscale-ip>:8765
 ```
 
-If the page loads, the server is reachable.
+A web page should load indicating that the service has been correctly installed and is running. 
 
-Try waking the PC by pasting this in the terminal:
+>[!IMPORTANT]
+>The web page is still a work in progres, you don't need to interact with anything, just make sure it loads.
+>Your browser might warn you about security risks, just ignore it and procede. This behavior is expected when dealing with self-hosted services.
+
+Then, try waking the PC by pasting this in the terminal:
 
 ```
 curl "http://<your-server-tailscale-ip>:8765/wake/pc?token=your-token"
 ```
 
-If the PC wakes up, the installation is working correctly.
-You can now go to the [Moonlight setup](link al readme moolight) 
+If the PC wakes up, the installation was successfull.
+You can now go to the last step: [Moonlight installation](https://github.com/maggicone/remWOL-moonlight/tree/main/moonlight#installation)
 
 ---
 
