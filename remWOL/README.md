@@ -45,7 +45,7 @@ The setup process is divided into two parts:
 
 ---
 
-# 1) remWOL Server installation
+# 1) Installation
 
 ## Option 1 — Docker Compose (Recommended)
 
