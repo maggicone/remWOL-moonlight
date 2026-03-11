@@ -173,33 +173,9 @@ python3 server.py
 
 # 2) Check Everything Is Working
 
-## If Using Tailscale
-
-Connect the client device using **mobile data (4G/5G hotspot)** to ensure you are outside your local network.
-
-Make sure both the **client device and the server are connected to the same Tailnet**.
-
-Open in your browser:
-
-```
-http://<your-server-tailscale-ip>:8765
-```
-
-If the page loads, the server is reachable.
-
-Try waking the PC:
-
-```
-curl "http://<your-server-tailscale-ip>:8765/wake/pc?token=your-token"
-```
-
-If the PC wakes up, the installation is working correctly.
-
----
-
 ## If Using DuckDNS + Port Forwarding
 
-Connect the client device using **mobile data**.
+Connect the client device that will use Moonlight via **mobile data (4G/5G hotspot)** to ensure you are outside your local network.
 
 Open:
 
@@ -213,15 +189,43 @@ If the page does not load, check:
 - DuckDNS setup
 - server installation
 
-Test Wake-on-LAN:
+Test Wake-on-LAN by pasting this in the terminal:
 
 ```
 curl "http://<your-duckdns-domain>:8765/wake/pc?token=your-token"
 ```
 
 If the PC wakes up, the installation was successful.
+You can now go to the [Moonlight setup](link al readme moolight) 
 
 ---
+
+## If Using Tailscale
+
+Connect the client device that will use Moonlight via **mobile data (4G/5G hotspot)** to ensure you are outside your local network.
+
+Make sure both the **client device and the server are connected to the same Tailnet**.
+
+Open in your browser:
+
+```
+http://<your-server-tailscale-ip>:8765
+```
+
+If the page loads, the server is reachable.
+
+Try waking the PC by pasting this in the terminal:
+
+```
+curl "http://<your-server-tailscale-ip>:8765/wake/pc?token=your-token"
+```
+
+If the PC wakes up, the installation is working correctly.
+You can now go to the [Moonlight setup](link al readme moolight) 
+
+---
+
+
 
 # API Reference
 
