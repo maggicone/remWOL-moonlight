@@ -40,8 +40,8 @@ If you only want the server, skip directly to the **Installation** section.
 
 The setup process is divided into two parts:
 
-1. Installation  
-2. Check everything is working  
+1. [Installation](https://github.com/maggicone/remWOL-moonlight/tree/main/remWOL#1-installation)  
+2. [Check everything is working](https://github.com/maggicone/remWOL-moonlight/tree/main/remWOL#2-check-everything-is-working) 
 
 ---
 
