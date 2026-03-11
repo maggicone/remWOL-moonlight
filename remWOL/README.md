@@ -3,7 +3,7 @@
 > A lightweight, self-hosted HTTP API server that sends Wake-on-LAN magic packets to devices on your local network.  
 > Zero dependencies, single container, ready in minutes.
 
-Built as the backend for the **Moonlight-QT WOL fork**, but it also works as a standalone service for any use case.
+Built as the backend for the **remWOL-Moonlight fork**, but it also works as a standalone service for any use case.
 
 Moonlight fork:  
 https://github.com/maggicone/moonlight-qt
