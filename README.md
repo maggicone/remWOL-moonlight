@@ -56,4 +56,4 @@ There are two possible approaches:
 
 ---
 
-[Beginner-friendly guide on how to set evrything up](guide/#beginner-friendly-guide)
+# [beginner-friendly-guide on how to set evrything up](guide/#beginner-friendly-guide)
