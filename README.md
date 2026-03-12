@@ -32,28 +32,4 @@ This button calls a Wake-on-LAN server directly from the Moonlight interface.
 
 ---
 
-# Setup guide
-
-To configure **remWOL-moonlight**, your WOL server must be reachable from anywhere on the internet.
-
-There are two possible approaches:
-
-- **Tailscale VPN**
-- **DuckDNS + Port Forwarding** *(recommended)*
-
----
-
-> [!IMPORTANT]  
-> Using **Tailscale** is recommended only if it is already your main way of accessing your gaming PC with Moonlight.  
-> You can continue using your existing port-forwarded Moonlight setup regardless of whether you choose the DuckDNS method or the Tailscale method.
-
----
-
-> [!WARNING]  
-> Installing **Tailscale on SteamOS devices can be somewhat tedious**.  
-> This guide will not cover how to install Tailscale.  
-> Both the **client device and the server must be connected to the same Tailnet** to send WOL requests.
-
----
-
 # [beginner-friendly-guide on how to set evrything up](guide/#beginner-friendly-guide)
