@@ -12,7 +12,7 @@ If you still have issues, feel free to **[open an Issue](https://github.com/magg
 
 > [!WARNING]  
 > **Most of this project is AI-generated code.**  
-> All software in this repository is provided **"AS IS, without warranty of any kind**.  
+> All software in this repository is provided **"AS IS", without warranty of any kind**.  
 > The author is **not responsible** for any damage, data loss, or issues caused by following this guide or using the software.
 
 wthout further ado, let's get started
