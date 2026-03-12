@@ -22,7 +22,7 @@ wthout further ado, let's get started
 
 - An **always-on device** on your LAN to run the WOL server (NAS, Raspberry Pi, home server, old laptop, etc.)
 - Docker already configured
-- **Wake-on-LAN enabled in your PC BIOS** and working
+- **Wake-on-LAN enabled in your Gaming PC BIOS** and working
 
 ---
 
