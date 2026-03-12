@@ -2,8 +2,8 @@
 
 **remWOL-moonlight** is a project that integrates a new button directly into Moonlight that allows you to **wake your PC remotely from anywhere in the world**, with or without a VPN such as Tailscale.
 
-<img width="450" height="450" alt="Main screen" src="assets/Main_showcase.png" style="max-width:100%;height:auto;" />
-<img width="450" height="450" alt="Settings screen" src="assets/settings_showcase.png" style="max-width:100%;height:auto;" />
+<img width="600" height="450" alt="Main screen" src="assets/Main_showcase.png" style="max-width:100%;height:auto;" />
+<img width="600" height="450" alt="Settings screen" src="assets/settings_showcase.png" style="max-width:100%;height:auto;" />
 ---
 
 # How does it work?
