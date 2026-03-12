@@ -90,7 +90,7 @@ curl "http://<your-duckdns-domain>:8765/wake/pc?token=your-token"
 If the PC wakes up, the installation was successfull.
 You can now go to the last step
 
-## Step 3 — Setup Moonlight
+# Step 3 — Setup Moonlight
 
 If you made it this far, your server is up and running and is able to wake your PC over the network. **remWOL-Moonlight** is the bridge that lets Moonlight trigger that process directly from the app itself.
 
