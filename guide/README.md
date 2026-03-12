@@ -41,7 +41,7 @@ There are two possible approaches:
 ---
 
 > [!IMPORTANT]  
-> Using **Tailscale** is recommended only if it is already your main way of accessing your gaming PC with Moonlight.  
+> Using **Tailscale** is recommended only if it is already your main way of accessing your gaming PC with Moonlight, or if you have troubles with setting up the DNS.  
 > You can still continue using your existing port-forwarded Moonlight setup regardless of whether you choose the DuckDNS method or the Tailscale method.
 > By chosing going with Tailscale, youur client device running Moonlight will still need tailscale installed and running
 
