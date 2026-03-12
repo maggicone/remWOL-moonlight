@@ -32,4 +32,4 @@ This button calls a Wake-on-LAN server directly from the Moonlight interface.
 
 ---
 
-# [beginner-friendly-guide on how to set evrything up](guide/#beginner-friendly-guide)
+# [beginner-friendly-guide on how to set everything up](guide/#beginner-friendly-guide)
