@@ -88,6 +88,37 @@ curl "http://<your-duckdns-domain>:8765/wake/pc?token=your-token"
 ```
 
 If the PC wakes up, the installation was successfull.
-You can now go to the last step: [Moonlight installation](https://github.com/maggicone/remWOL-moonlight/tree/main/moonlight#installation)
+You can now go to the last step
+
+## Step 3 — Setup Moonlight
+
+If you made it this far, your server is up and running and is able to wake your PC over the network. **remWOL-Moonlight** is the bridge that lets Moonlight trigger that process directly from the app itself.
+
+> [!WARNING]
+> On Windows, uninstall any existing version of Moonlight before proceeding.
+
+### Installation
+
+Download and install the patched version of Moonlight for your OS from the [Releases](link) page.
+
+### Configuration
+
+Open Moonlight, go to **Settings** and scroll down to the **Wake-on-LAN** section.
+
+1. Tick **Enable Wake-on-LAN**
+2. Fill in the two fields:
+
+| Field | Value |
+|---|---|
+| **API URL** | `http://<your-duckdns-domain>:8765/wake/pc` |
+| **Auth Token** | your secret token |
+
+### Usage
+
+When you click on a paired PC that is offline, a new **Wake PC (API)** button will appear. Click it to send the wake request to your server.
+
+Enjoy.
+
+
 
 
