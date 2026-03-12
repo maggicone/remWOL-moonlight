@@ -24,9 +24,9 @@ Once you are sure that port forwarding and your DNS are correctly configured, yo
 
 # Step 2 installing the WOL server container
 
-## Method 1 — Docker CLI
+Replace `your-secret-token` with a secret passord, and  `AA:BB:CC:DD:EE:FF` with your gaming pc MAC address:
 
-Replace `your-secret-token` with a passord, and  `AA:BB:CC:DD:EE:FF` with your gaming pc MAC address:
+## Method 1 — Docker CLI
 
 ```bash
 docker run -d \
