@@ -99,7 +99,7 @@ If you made it this far, your server is up and running and is able to wake your 
 
 ### Installation
 
-Download and install the patched version of Moonlight for your OS from the [Releases](link) page.
+Download and install the patched version of remWOL-Moonlight for your OS from the [Releases](https://github.com/maggicone/remWOL-moonlight/releases/) page.
 
 ### Configuration
 
