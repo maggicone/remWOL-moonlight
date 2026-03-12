@@ -1,9 +1,10 @@
 # Beginner-Friendly Guide
 
-This guide provides **clear, step-by-step instructions** for anyone setting up **remWOL-Moonlight** from scratch.
+-This guide provides **clear, step-by-step instructions** for anyone setting up **remWOL-Moonlight** from scratch.
 
-**Note**: Some steps link to external software installation guides. If you get stuck, **Google is your friend**.
+-**Note**: Some steps link to external software installation guides. If you get stuck, **Google is your friend**.
 
+-This guide also assumes you know the very basics of docker.
 
 If you still have issues, feel free to **[open an Issue](https://github.com/maggicone/remWOL-moonlight/issues/new)** describing your problem.
 
