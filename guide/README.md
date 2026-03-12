@@ -43,7 +43,7 @@ There are two possible approaches:
 > [!IMPORTANT]  
 > Using **Tailscale** is recommended only if it is already your main way of accessing your gaming PC with Moonlight, or if you have troubles with setting up the DNS.  
 > In Moonlight, you can still continue connecting to your pc via Port forwarding regardless of whether you choose the DNS method or the Tailscale method.
-> By chosing going with Tailscale, youur client device running Moonlight will still need tailscale installed and running
+> By chosing going with Tailscale, your client device running Moonlight will still need tailscale installed and running
 
 ---
 
