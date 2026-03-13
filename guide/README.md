@@ -34,7 +34,7 @@ To configure **remWOL-moonlight**, your WOL server must be reachable from anywhe
 There are two possible approaches:
 
 - Using [**Tailscale VPN**](Tailscale%20guide/README.md)
-- Using [**DNS + Port Forwarding**](DNS%20%2B%20port%20forwarding%20guide/README.md) *(recommended)*
+- Using [**DNS + Port Forwarding**](DNS%20%2B%20port%20forwarding%20guide/README.md) 
 
 
 
